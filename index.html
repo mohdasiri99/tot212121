@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل هندسة الأثر التدريبي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .icon-box {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+        @media print {
+            .no-print { display: none; }
+            body { background-color: white; }
+            .page-break { page-break-before: always; }
+            .card-shadow { box-shadow: none; border: 1px solid #e2e8f0; }
+            .gradient-bg { background: #1e293b !important; -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body class="leading-relaxed bg-slate-50">
+
+    <!-- Navigation -->
+    <header class="gradient-bg text-white sticky top-0 z-50 shadow-lg no-print">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold flex items-center gap-2">
+                <i class="fas fa-compass"></i>
+                <span>بوصلة المدرب المحترف</span>
+            </h1>
+            <div class="text-xs md:text-sm bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm">
+                رؤية الكوتش محمد علي عسيري
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-[90vh] flex flex-col justify-center items-center text-center bg-white p-8 mb-10 border-b-[12px] border-slate-800 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        
+        <div class="relative z-10 mb-8 p-8 bg-slate-50 rounded-full border border-slate-200 shadow-xl">
+            <i class="fas fa-brain text-7xl text-slate-800"></i>
+        </div>
+        
+        <h1 class="relative z-10 text-4xl md:text-7xl font-bold text-slate-900 mb-6 tracking-tight">
+            هندسة الأثر التدريبي
+        </h1>
+        
+        <p class="relative z-10 text-xl md:text-3xl text-slate-500 font-light mb-12 max-w-4xl leading-relaxed">
+            منهجية تحويل المعرفة الخام إلى <span class="text-blue-600 font-bold">مهارات حية</span> وسلوكيات مستدامة
+        </p>
+        
+        <div class="relative z-10 bg-gradient-to-r from-blue-50 to-indigo-50 border-r-4 border-blue-600 p-8 text-right max-w-3xl w-full rounded-xl shadow-sm">
+            <h3 class="font-bold text-xl text-blue-900 mb-3 flex items-center gap-2">
+                <i class="fas fa-lightbulb text-yellow-500"></i> الفلسفة الجوهرية:
+            </h3>
+            <p class="text-xl text-slate-700 font-serif italic leading-loose">
+                "المدرب التقليدي يملأ الدلو، والمدرب الملهم يوقد الشعلة. نحن هنا لنتعلم كيف نوقد الشعلة بأسس علمية ومنهجية راسخة."
+            </p>
+        </div>
+
+        <div class="mt-16 text-slate-400">
+            <p class="text-sm tracking-widest uppercase mb-2">إعداد وتطوير</p>
+            <h2 class="text-2xl font-bold text-slate-800">محمد علي عسيري</h2>
+            <p class="text-blue-500 font-medium">كوتش تطوير الأداء</p>
+        </div>
+    </section>
+
+    <!-- Content Container -->
+    <div class="container mx-auto px-4 md:px-8 py-10 max-w-6xl">
+
+        <!-- Standard 1 -->
+        <div class="page-break mb-20">
+            <div class="flex items-center gap-4 mb-10 border-b-2 border-slate-100 pb-6">
+                <div class="bg-slate-800 text-white w-16 h-16 flex items-center justify-center rounded-2xl text-3xl font-bold shadow-lg">01</div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">شيفرة المتدرب</h2>
+                    <p class="text-slate-500 mt-1">الفكرة الرئيسية الأولى: المعرفة العميقة بالإنسان</p>
+                </div>
+            </div>
+            
+            <p class="text-xl mb-10 text-slate-600 leading-relaxed max-w-4xl">
+                التدريب ليس بثاً إذاعياً باتجاه واحد، بل هو عملية "معايرة" دقيقة. قبل أن تضع المحتوى، يجب أن تفكك شيفرة من يستقبله. نحن لا ندرب "قاعات"، نحن ندرب "عقولاً" فريدة.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-10">
+                <!-- Concept 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow hover-lift group">
+                    <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center mb-6 text-2xl group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">ضبط التردد (أنماط الاستقبال)</h3>
+                    <p class="text-slate-600 mb-4">لكل عقل "بوابة مفضلة" لدخول المعلومة. البراعة تكمن في البث على جميع الموجات:</p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-slate-600">
+                            <span class="w-2 h-2 bg-teal-500 rounded-full"></span>
+                            <span><strong>للبصريين:</strong> ارسم الخريطة الذهنية والمشهد.</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-slate-600">
+                            <span class="w-2 h-2 bg-teal-500 rounded-full"></span>
+                            <span><strong>للسمعيين:</strong> زن نبرة الصوت وقوة الحجة.</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm text-slate-600">
+                            <span class="w-2 h-2 bg-teal-500 rounded-full"></span>
+                            <span><strong>للحسيين:</strong> اسمح لهم بلمس الفكرة وتجربتها.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Concept 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow hover-lift group">
+                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6 text-2xl group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">التشخيص قبل الوصف (TNA)</h3>
+                    <p class="text-slate-600 mb-4">الطبيب لا يصف الدواء قبل التحليل، والمدرب لا يصمم الحقيبة قبل تحليل الفجوة:</p>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-start gap-3 bg-indigo-50 p-3 rounded-lg text-indigo-900 text-sm">
+                            <i class="fas fa-check mt-1"></i>
+                            ما الذي يعرفونه بالفعل؟ (لتجنب الملل)
+                        </li>
+                        <li class="flex items-start gap-3 bg-indigo-50 p-3 rounded-lg text-indigo-900 text-sm">
+                            <i class="fas fa-check mt-1"></i>
+                            ما الذي يحتاجونه فعلاً؟ (لتحقيق النفع)
+                        </li>
+                        <li class="flex items-start gap-3 bg-indigo-50 p-3 rounded-lg text-indigo-900 text-sm">
+                            <i class="fas fa-check mt-1"></i>
+                            ما هي "نقاط الألم" لديهم؟ (لصناعة الحلول)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Standard 2 -->
+        <div class="page-break mb-20">
+            <div class="flex items-center gap-4 mb-10 border-b-2 border-slate-100 pb-6">
+                <div class="bg-slate-800 text-white w-16 h-16 flex items-center justify-center rounded-2xl text-3xl font-bold shadow-lg">02</div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">سيكولوجية الكبار</h2>
+                    <p class="text-slate-500 mt-1">الفكرة الرئيسية الثانية: نظريات التعلم الحديثة</p>
+                </div>
+            </div>
+
+            <p class="text-xl mb-10 text-slate-600 leading-relaxed">
+                تعليم الكبار ليس كتعليم الصغار؛ الكبار لا يحتاجون إلى "معلم" يلقنهم، بل إلى "ميسّر" يربط خبراتهم السابقة بالمعرفة الجديدة.
+            </p>
+
+            <!-- Creative Comparison -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg mb-12 border border-slate-100">
+                <div class="grid grid-cols-2 text-center">
+                    <div class="bg-slate-100 p-6 border-b border-r border-slate-200">
+                        <h3 class="text-xl font-bold text-slate-500">مدرسة التلقين (Pedagogy)</h3>
+                    </div>
+                    <div class="bg-blue-600 p-6 text-white">
+                        <h3 class="text-xl font-bold">شراكة النضج (Andragogy)</h3>
+                    </div>
+                </div>
+                <div class="p-8 grid md:grid-cols-2 gap-8 items-center">
+                    <div class="text-slate-500 space-y-4 text-sm md:text-base border-l-2 border-slate-200 pl-4 md:pl-0 md:border-l-0 md:border-l-0">
+                        <p><i class="fas fa-times-circle text-red-400 ml-2"></i> المتدرب وعاء فارغ ينتظر الامتلاء.</p>
+                        <p><i class="fas fa-times-circle text-red-400 ml-2"></i> الدافع هو "الخوف من الفشل" أو الدرجات.</p>
+                        <p><i class="fas fa-times-circle text-red-400 ml-2"></i> الخبرة السابقة لا قيمة لها.</p>
+                    </div>
+                    <div class="text-slate-800 space-y-4 font-medium text-sm md:text-base border-r-4 border-blue-500 pr-4 bg-blue-50 p-4 rounded-lg">
+                        <p><i class="fas fa-check-circle text-green-500 ml-2"></i> المتدرب شريك ومصدر غني للمعرفة.</p>
+                        <p><i class="fas fa-check-circle text-green-500 ml-2"></i> الدافع هو "تطوير الذات" وحل المشكلات.</p>
+                        <p><i class="fas fa-check-circle text-green-500 ml-2"></i> الخبرة هي الأساس الذي نبني عليه.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl border-t-4 border-yellow-500 shadow-sm">
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">دورة كولب (رحلة المعنى)</h4>
+                    <p class="text-slate-600 text-sm">لا يكفي أن تقول المعلومة. اجعلهم يمرون بـ: <br> <strong>تجربة ← تأمل ← استنتاج ← تطبيق.</strong> <br>هكذا تتحول المعلومة إلى خبرة.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border-t-4 border-red-500 shadow-sm">
+                    <h4 class="font-bold text-lg text-slate-800 mb-2">هرم بلوم (سلم الإتقان)</h4>
+                    <p class="text-slate-600 text-sm">اصعد بهم من قاع "التذكر" إلى قمة "الابتكار". المدرب العظيم هو من يجعل متدربه قادراً على النقد والإنتاج، لا الحفظ فقط.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Standard 3 -->
+        <div class="page-break mb-20">
+            <div class="flex items-center gap-4 mb-10 border-b-2 border-slate-100 pb-6">
+                <div class="bg-slate-800 text-white w-16 h-16 flex items-center justify-center rounded-2xl text-3xl font-bold shadow-lg">03</div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">مسارح التأثير</h2>
+                    <p class="text-slate-500 mt-1">الفكرة الرئيسية الثالثة: أنماط وبيئات التدريب</p>
+                </div>
+            </div>
+
+            <p class="text-xl mb-10 text-slate-600 leading-relaxed">
+                تغيرت المسارح، لكن "الأداء" يجب أن يبقى ساحراً. المرونة في التنقل بين الواقعي والافتراضي هي مهارة العصر.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Environment 1 -->
+                <div class="relative group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-blue-500 transition-all duration-300">
+                    <div class="absolute -top-4 right-6 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">الكلاسيكي</div>
+                    <div class="text-4xl text-slate-300 mb-4 group-hover:text-blue-600 transition-colors"><i class="fas fa-users"></i></div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">الميدان الحضوري</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        حيث الطاقة الإنسانية المباشرة. هنا تبرز لغة الجسد، والكاريزما، والقدرة على قراءة عيون الحاضرين وبناء الألفة اللحظية.
+                    </p>
+                </div>
+
+                <!-- Environment 2 -->
+                <div class="relative group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-purple-500 transition-all duration-300">
+                    <div class="absolute -top-4 right-6 bg-purple-600 text-white text-xs px-3 py-1 rounded-full">الرقمي</div>
+                    <div class="text-4xl text-slate-300 mb-4 group-hover:text-purple-600 transition-colors"><i class="fas fa-globe"></i></div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">الفضاء الافتراضي</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        تحدي كسر "الشاشة الجليدية". يتطلب أدوات تفاعلية ذكية، صوتاً حيوياً، وإدارة صارمة للوقت والمشتتات الرقمية.
+                    </p>
+                </div>
+
+                <!-- Environment 3 -->
+                <div class="relative group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-orange-500 transition-all duration-300">
+                    <div class="absolute -top-4 right-6 bg-orange-600 text-white text-xs px-3 py-1 rounded-full">الذكي</div>
+                    <div class="text-4xl text-slate-300 mb-4 group-hover:text-orange-600 transition-colors"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">النموذج الهجين</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        فن الدمج بين "عمق" اللقاء الحضوري و"مرونة" التقنية. هو المستقبل الذي يجمع أفضل ما في العالمين لتعظيم العائد.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Standard 4 -->
+        <div class="page-break mb-10">
+            <div class="flex items-center gap-4 mb-10 border-b-2 border-slate-100 pb-6">
+                <div class="bg-slate-800 text-white w-16 h-16 flex items-center justify-center rounded-2xl text-3xl font-bold shadow-lg">04</div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800">صندوق أدوات الإبهار</h2>
+                    <p class="text-slate-500 mt-1">الفكرة الرئيسية الرابعة: استراتيجيات التدريب النشط</p>
+                </div>
+            </div>
+
+            <p class="text-xl mb-10 text-slate-600 leading-relaxed">
+                المحتوى القوي بدون استراتيجية عرض ذكية هو كالطعام الفاخر في طبق مكسور. هنا تحول القاعة إلى ورشة عمل نابضة بالحياة.
+            </p>
+
+            <div class="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Strategy Item -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-800">العصف الذهني (إشعال الشرارة)</h4>
+                            <p class="text-slate-500 text-sm mt-1">تقنية تحرير العقل من القيود. الكم يولد الكيف، ولا مكان هنا لـ "نعم ولكن"، فقط "نعم و...".</p>
+                        </div>
+                    </div>
+
+                    <!-- Strategy Item -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center text-xl"><i class="fas fa-theater-masks"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-800">لعب الأدوار (المحاكاة الحية)</h4>
+                            <p class="text-slate-500 text-sm mt-1">نقل الموقف من "النظرية" إلى "الشعور". أفضل طريقة لبناء التعاطف وصقل المهارات السلوكية.</p>
+                        </div>
+                    </div>
+
+                    <!-- Strategy Item -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center text-xl"><i class="fas fa-search-location"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-800">دراسة الحالة (التشريح الواقعي)</h4>
+                            <p class="text-slate-500 text-sm mt-1">إحضار الواقع إلى القاعة. نحلل قصة نجاح أو فشل لنستخرج الدروس دون المخاطرة بالتجربة الحقيقية.</p>
+                        </div>
+                    </div>
+
+                    <!-- Strategy Item -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center text-xl"><i class="fas fa-puzzle-piece"></i></div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-800">التعلم التعاوني (قوة الفريق)</h4>
+                            <p class="text-slate-500 text-sm mt-1">حيث يُعلّم الأقران بعضهم البعض. تذوب الفوارق وتزيد المسؤولية الجماعية عن النجاح.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <span class="inline-block bg-slate-800 text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg">
+                    السر ليس في كثرة الأدوات، بل في توقيت استخدامها 🎯
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Final Inspiration -->
+    <section class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-20 text-center page-break">
+        <div class="container mx-auto px-6 relative overflow-hidden">
+            <i class="fas fa-quote-right absolute top-0 right-10 text-8xl text-white opacity-5"></i>
+            <h2 class="text-4xl font-bold mb-6 relative z-10">رسالتك كمدرب تتجاوز القاعة</h2>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto mb-8 leading-loose relative z-10">
+                المعرفة قوة، لكن المشاركة هي المفتاح.
+                <br>
+                بإتقانك لهذه المعايير، أنت لا تقدم دورة تدريبية فحسب، بل تصمم <span class="text-blue-400 font-bold">تجربة حياة</span> تبقى في الذاكرة وتغير المسار.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-slate-600 py-8 text-center border-t border-slate-200 mt-auto">
+        <div class="container mx-auto flex flex-col items-center justify-center">
+            <div class="w-16 h-1 bg-blue-500 mb-4 rounded-full"></div>
+            <p class="font-bold text-slate-900 text-xl mb-1">محمد علي عسيري</p>
+            <p class="text-sm text-slate-500 mb-3">كوتش تطوير الأداء</p>
+            <div class="flex items-center gap-2 bg-slate-100 px-4 py-2 rounded-lg group hover:bg-slate-200 transition-colors cursor-pointer">
+                <i class="fa-brands fa-x-twitter text-slate-900"></i>
+                <span dir="ltr" class="font-mono text-sm group-hover:text-blue-600 transition-colors">@mohdasiri99</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
