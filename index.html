@@ -28,12 +28,17 @@
         .hover-lift:hover {
             transform: translateY(-5px);
         }
+        /* تحسينات الطباعة */
         @media print {
             .no-print { display: none; }
-            body { background-color: white; }
-            .page-break { page-break-before: always; }
+            body { background-color: white; -webkit-print-color-adjust: exact; }
+            .page-break { page-break-before: always; margin-top: 0 !important; }
+            .section-container { break-inside: avoid; page-break-inside: avoid; }
             .card-shadow { box-shadow: none; border: 1px solid #e2e8f0; }
             .gradient-bg { background: #1e293b !important; -webkit-print-color-adjust: exact; }
+            /* تقليل الهوامش عند الطباعة */
+            .print-mb-small { margin-bottom: 1rem !important; }
+            .print-gap-small { gap: 1rem !important; }
         }
     </style>
 </head>
@@ -53,7 +58,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="min-h-[90vh] flex flex-col justify-center items-center text-center bg-white p-8 mb-10 border-b-[12px] border-slate-800 relative overflow-hidden">
+    <section class="min-h-[90vh] flex flex-col justify-center items-center text-center bg-white p-8 mb-10 border-b-[12px] border-slate-800 relative overflow-hidden section-container">
         <!-- Background Pattern -->
         <div class="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         
@@ -69,7 +74,7 @@
             منهجية تحويل المعرفة الخام إلى <span class="text-blue-600 font-bold">مهارات حية</span> وسلوكيات مستدامة
         </p>
         
-        <div class="relative z-10 bg-gradient-to-r from-blue-50 to-indigo-50 border-r-4 border-blue-600 p-8 text-right max-w-3xl w-full rounded-xl shadow-sm">
+        <div class="relative z-10 bg-gradient-to-r from-blue-50 to-indigo-50 border-r-4 border-blue-600 p-8 text-right max-w-3xl w-full rounded-xl shadow-sm section-container">
             <h3 class="font-bold text-xl text-blue-900 mb-3 flex items-center gap-2">
                 <i class="fas fa-lightbulb text-yellow-500"></i> الفلسفة الجوهرية:
             </h3>
@@ -89,8 +94,8 @@
     <div class="container mx-auto px-4 md:px-8 py-10 max-w-6xl">
 
         <!-- Standard 1 -->
-        <div class="page-break mb-20">
-            <div class="flex items-center gap-4 mb-10 border-b-2 border-slate-100 pb-6">
+        <div class="page-break mb-12 section-container">
+            <div class="flex items-center gap-4 mb-6 border-b-2 border-slate-100 pb-4 print-mb-small">
                 <div class="bg-slate-800 text-white w-16 h-16 flex items-center justify-center rounded-2xl text-3xl font-bold shadow-lg">01</div>
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-800">شيفرة المتدرب</h2>
@@ -98,19 +103,19 @@
                 </div>
             </div>
             
-            <p class="text-xl mb-10 text-slate-600 leading-relaxed max-w-4xl">
+            <p class="text-xl mb-8 text-slate-600 leading-relaxed max-w-4xl print-mb-small">
                 التدريب ليس بثاً إذاعياً باتجاه واحد، بل هو عملية "معايرة" دقيقة. قبل أن تضع المحتوى، يجب أن تفكك شيفرة من يستقبله. نحن لا ندرب "قاعات"، نحن ندرب "عقولاً" فريدة.
             </p>
 
-            <div class="grid md:grid-cols-2 gap-8 mb-10">
+            <div class="grid md:grid-cols-2 gap-6 mb-8 print-gap-small">
                 <!-- Concept 1 -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow hover-lift group">
-                    <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center mb-6 text-2xl group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 card-shadow hover-lift group section-container">
+                    <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
                         <i class="fas fa-wifi"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-slate-800">ضبط التردد (أنماط الاستقبال)</h3>
-                    <p class="text-slate-600 mb-4">لكل عقل "بوابة مفضلة" لدخول المعلومة. البراعة تكمن في البث على جميع الموجات:</p>
-                    <div class="space-y-3">
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">ضبط التردد (أنماط الاستقبال)</h3>
+                    <p class="text-slate-600 mb-3 text-sm">لكل عقل "بوابة مفضلة" لدخول المعلومة. البراعة تكمن في البث على جميع الموجات:</p>
+                    <div class="space-y-2">
                         <div class="flex items-center gap-3 text-sm text-slate-600">
                             <span class="w-2 h-2 bg-teal-500 rounded-full"></span>
                             <span><strong>للبصريين:</strong> ارسم الخريطة الذهنية والمشهد.</span>
@@ -127,22 +132,22 @@
                 </div>
 
                 <!-- Concept 2 -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow hover-lift group">
-                    <div class="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6 text-2xl group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 card-shadow hover-lift group section-container">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
                         <i class="fas fa-microscope"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-slate-800">التشخيص قبل الوصف (TNA)</h3>
-                    <p class="text-slate-600 mb-4">الطبيب لا يصف الدواء قبل التحليل، والمدرب لا يصمم الحقيبة قبل تحليل الفجوة:</p>
-                    <ul class="list-none space-y-3">
-                        <li class="flex items-start gap-3 bg-indigo-50 p-3 rounded-lg text-indigo-900 text-sm">
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">التشخيص قبل الوصف (TNA)</h3>
+                    <p class="text-slate-600 mb-3 text-sm">الطبيب لا يصف الدواء قبل التحليل، والمدرب لا يصمم الحقيبة قبل تحليل الفجوة:</p>
+                    <ul class="list-none space-y-2">
+                        <li class="flex items-start gap-3 bg-indigo-50 p-2 rounded-lg text-indigo-900 text-xs md:text-sm">
                             <i class="fas fa-check mt-1"></i>
                             ما الذي يعرفونه بالفعل؟ (لتجنب الملل)
                         </li>
-                        <li class="flex items-start gap-3 bg-indigo-50 p-3 rounded-lg text-indigo-900 text-sm">
+                        <li class="flex items-start gap-3 bg-indigo-50 p-2 rounded-lg text-indigo-900 text-xs md:text-sm">
                             <i class="fas fa-check mt-1"></i>
                             ما الذي يحتاجونه فعلاً؟ (لتحقيق النفع)
                         </li>
-                        <li class="flex items-start gap-3 bg-indigo-50 p-3 rounded-lg text-indigo-900 text-sm">
+                        <li class="flex items-start gap-3 bg-indigo-50 p-2 rounded-lg text-indigo-900 text-xs md:text-sm">
                             <i class="fas fa-check mt-1"></i>
                             ما هي "نقاط الألم" لديهم؟ (لصناعة الحلول)
                         </li>
@@ -152,8 +157,8 @@
         </div>
 
         <!-- Standard 2 -->
-        <div class="page-break mb-20">
-            <div class="flex items-center gap-4 mb-10 border-b-2 border-slate-100 pb-6">
+        <div class="page-break mb-12 section-container">
+            <div class="flex items-center gap-4 mb-6 border-b-2 border-slate-100 pb-4 print-mb-small">
                 <div class="bg-slate-800 text-white w-16 h-16 flex items-center justify-center rounded-2xl text-3xl font-bold shadow-lg">02</div>
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-800">سيكولوجية الكبار</h2>
@@ -161,27 +166,27 @@
                 </div>
             </div>
 
-            <p class="text-xl mb-10 text-slate-600 leading-relaxed">
+            <p class="text-xl mb-8 text-slate-600 leading-relaxed print-mb-small">
                 تعليم الكبار ليس كتعليم الصغار؛ الكبار لا يحتاجون إلى "معلم" يلقنهم، بل إلى "ميسّر" يربط خبراتهم السابقة بالمعرفة الجديدة.
             </p>
 
             <!-- Creative Comparison -->
-            <div class="bg-white rounded-2xl overflow-hidden shadow-lg mb-12 border border-slate-100">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg mb-8 border border-slate-100 section-container">
                 <div class="grid grid-cols-2 text-center">
-                    <div class="bg-slate-100 p-6 border-b border-r border-slate-200">
-                        <h3 class="text-xl font-bold text-slate-500">مدرسة التلقين (Pedagogy)</h3>
+                    <div class="bg-slate-100 p-4 border-b border-r border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-500">مدرسة التلقين (Pedagogy)</h3>
                     </div>
-                    <div class="bg-blue-600 p-6 text-white">
-                        <h3 class="text-xl font-bold">شراكة النضج (Andragogy)</h3>
+                    <div class="bg-blue-600 p-4 text-white">
+                        <h3 class="text-lg font-bold">شراكة النضج (Andragogy)</h3>
                     </div>
                 </div>
-                <div class="p-8 grid md:grid-cols-2 gap-8 items-center">
-                    <div class="text-slate-500 space-y-4 text-sm md:text-base border-l-2 border-slate-200 pl-4 md:pl-0 md:border-l-0 md:border-l-0">
+                <div class="p-6 grid md:grid-cols-2 gap-6 items-center">
+                    <div class="text-slate-500 space-y-3 text-sm border-l-2 border-slate-200 pl-4 md:pl-0 md:border-l-0">
                         <p><i class="fas fa-times-circle text-red-400 ml-2"></i> المتدرب وعاء فارغ ينتظر الامتلاء.</p>
                         <p><i class="fas fa-times-circle text-red-400 ml-2"></i> الدافع هو "الخوف من الفشل" أو الدرجات.</p>
                         <p><i class="fas fa-times-circle text-red-400 ml-2"></i> الخبرة السابقة لا قيمة لها.</p>
                     </div>
-                    <div class="text-slate-800 space-y-4 font-medium text-sm md:text-base border-r-4 border-blue-500 pr-4 bg-blue-50 p-4 rounded-lg">
+                    <div class="text-slate-800 space-y-3 font-medium text-sm border-r-4 border-blue-500 pr-4 bg-blue-50 p-4 rounded-lg">
                         <p><i class="fas fa-check-circle text-green-500 ml-2"></i> المتدرب شريك ومصدر غني للمعرفة.</p>
                         <p><i class="fas fa-check-circle text-green-500 ml-2"></i> الدافع هو "تطوير الذات" وحل المشكلات.</p>
                         <p><i class="fas fa-check-circle text-green-500 ml-2"></i> الخبرة هي الأساس الذي نبني عليه.</p>
@@ -189,12 +194,12 @@
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-xl border-t-4 border-yellow-500 shadow-sm">
+            <div class="grid md:grid-cols-2 gap-6 print-gap-small">
+                <div class="bg-white p-6 rounded-xl border-t-4 border-yellow-500 shadow-sm section-container">
                     <h4 class="font-bold text-lg text-slate-800 mb-2">دورة كولب (رحلة المعنى)</h4>
                     <p class="text-slate-600 text-sm">لا يكفي أن تقول المعلومة. اجعلهم يمرون بـ: <br> <strong>تجربة ← تأمل ← استنتاج ← تطبيق.</strong> <br>هكذا تتحول المعلومة إلى خبرة.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl border-t-4 border-red-500 shadow-sm">
+                <div class="bg-white p-6 rounded-xl border-t-4 border-red-500 shadow-sm section-container">
                     <h4 class="font-bold text-lg text-slate-800 mb-2">هرم بلوم (سلم الإتقان)</h4>
                     <p class="text-slate-600 text-sm">اصعد بهم من قاع "التذكر" إلى قمة "الابتكار". المدرب العظيم هو من يجعل متدربه قادراً على النقد والإنتاج، لا الحفظ فقط.</p>
                 </div>
@@ -202,8 +207,8 @@
         </div>
 
         <!-- Standard 3 -->
-        <div class="page-break mb-20">
-            <div class="flex items-center gap-4 mb-10 border-b-2 border-slate-100 pb-6">
+        <div class="page-break mb-12 section-container">
+            <div class="flex items-center gap-4 mb-6 border-b-2 border-slate-100 pb-4 print-mb-small">
                 <div class="bg-slate-800 text-white w-16 h-16 flex items-center justify-center rounded-2xl text-3xl font-bold shadow-lg">03</div>
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-800">مسارح التأثير</h2>
@@ -211,13 +216,13 @@
                 </div>
             </div>
 
-            <p class="text-xl mb-10 text-slate-600 leading-relaxed">
+            <p class="text-xl mb-8 text-slate-600 leading-relaxed print-mb-small">
                 تغيرت المسارح، لكن "الأداء" يجب أن يبقى ساحراً. المرونة في التنقل بين الواقعي والافتراضي هي مهارة العصر.
             </p>
 
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-3 gap-6 print-gap-small">
                 <!-- Environment 1 -->
-                <div class="relative group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-blue-500 transition-all duration-300">
+                <div class="relative group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-blue-500 transition-all duration-300 section-container">
                     <div class="absolute -top-4 right-6 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">الكلاسيكي</div>
                     <div class="text-4xl text-slate-300 mb-4 group-hover:text-blue-600 transition-colors"><i class="fas fa-users"></i></div>
                     <h3 class="text-xl font-bold text-slate-800 mb-2">الميدان الحضوري</h3>
@@ -227,7 +232,7 @@
                 </div>
 
                 <!-- Environment 2 -->
-                <div class="relative group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-purple-500 transition-all duration-300">
+                <div class="relative group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-purple-500 transition-all duration-300 section-container">
                     <div class="absolute -top-4 right-6 bg-purple-600 text-white text-xs px-3 py-1 rounded-full">الرقمي</div>
                     <div class="text-4xl text-slate-300 mb-4 group-hover:text-purple-600 transition-colors"><i class="fas fa-globe"></i></div>
                     <h3 class="text-xl font-bold text-slate-800 mb-2">الفضاء الافتراضي</h3>
@@ -237,7 +242,7 @@
                 </div>
 
                 <!-- Environment 3 -->
-                <div class="relative group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-orange-500 transition-all duration-300">
+                <div class="relative group bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-orange-500 transition-all duration-300 section-container">
                     <div class="absolute -top-4 right-6 bg-orange-600 text-white text-xs px-3 py-1 rounded-full">الذكي</div>
                     <div class="text-4xl text-slate-300 mb-4 group-hover:text-orange-600 transition-colors"><i class="fas fa-project-diagram"></i></div>
                     <h3 class="text-xl font-bold text-slate-800 mb-2">النموذج الهجين</h3>
@@ -249,8 +254,8 @@
         </div>
 
         <!-- Standard 4 -->
-        <div class="page-break mb-10">
-            <div class="flex items-center gap-4 mb-10 border-b-2 border-slate-100 pb-6">
+        <div class="page-break mb-10 section-container">
+            <div class="flex items-center gap-4 mb-6 border-b-2 border-slate-100 pb-4 print-mb-small">
                 <div class="bg-slate-800 text-white w-16 h-16 flex items-center justify-center rounded-2xl text-3xl font-bold shadow-lg">04</div>
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-slate-800">صندوق أدوات الإبهار</h2>
@@ -258,12 +263,12 @@
                 </div>
             </div>
 
-            <p class="text-xl mb-10 text-slate-600 leading-relaxed">
+            <p class="text-xl mb-8 text-slate-600 leading-relaxed print-mb-small">
                 المحتوى القوي بدون استراتيجية عرض ذكية هو كالطعام الفاخر في طبق مكسور. هنا تحول القاعة إلى ورشة عمل نابضة بالحياة.
             </p>
 
-            <div class="bg-white rounded-3xl p-8 shadow-xl border border-slate-100">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-3xl p-6 shadow-xl border border-slate-100 section-container">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     
                     <!-- Strategy Item -->
                     <div class="flex gap-4">
@@ -304,7 +309,7 @@
                 </div>
             </div>
             
-            <div class="mt-8 text-center">
+            <div class="mt-8 text-center section-container">
                 <span class="inline-block bg-slate-800 text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg">
                     السر ليس في كثرة الأدوات، بل في توقيت استخدامها 🎯
                 </span>
@@ -327,7 +332,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white text-slate-600 py-8 text-center border-t border-slate-200 mt-auto">
+    <footer class="bg-white text-slate-600 py-8 text-center border-t border-slate-200 mt-auto section-container">
         <div class="container mx-auto flex flex-col items-center justify-center">
             <div class="w-16 h-1 bg-blue-500 mb-4 rounded-full"></div>
             <p class="font-bold text-slate-900 text-xl mb-1">محمد علي عسيري</p>
